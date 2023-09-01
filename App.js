@@ -18,21 +18,24 @@ export default class App extends Component {
     }
     
     render() {
+        console.log(this.state.text1 === '')
+
         return (
             <View style={styles.container}>
                 
                 <View style={styles.rowContainer}>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text1 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text1)} style={styles.box} onPress={() => {this.setState({text1 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text1}
+                            {this.state.text1 !== ''}
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text2 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text2)} style={styles.box} onPress={() => {this.setState({text2 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text2}
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text3 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text3)} style={styles.box} onPress={() => {this.setState({text3 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text3}
                         </Text>
@@ -40,17 +43,17 @@ export default class App extends Component {
                 </View>
                 
                 <View style={styles.rowContainer}>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text4 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text4)} style={styles.box} onPress={() => {this.setState({text4 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text4}
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text5 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text5)} style={styles.box} onPress={() => {this.setState({text5 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text5}
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text6 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text6)} style={styles.box} onPress={() => {this.setState({text6 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text6}
                         </Text>
@@ -58,17 +61,17 @@ export default class App extends Component {
                 </View>
                 
                 <View style={styles.rowContainer}>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text7 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text7)} style={styles.box} onPress={() => {this.setState({text7 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text7}
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text8 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text8)} style={styles.box} onPress={() => {this.setState({text8 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text8}
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.box} onPress={() => {this.setState({text9 : this.handleButtonPress()})}}>
+                    <TouchableOpacity disabled={['O', 'X'].includes(this.state.text9)} style={styles.box} onPress={() => {this.setState({text9 : this.handleButtonPress()})}}>
                         <Text style={styles.gameText}>
                             {this.state.text9}
                         </Text>
